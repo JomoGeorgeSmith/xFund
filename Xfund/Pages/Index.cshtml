@@ -10,13 +10,10 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <style>
-
         .carousel-container {
             position: absolute;
             top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
             z-index: 1;
         }
 
@@ -62,6 +59,13 @@
             color: white;
             margin-left: 0;
         }
+
+        .placeholder-section {
+            margin-top: 90vh;
+            padding: 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -91,18 +95,74 @@
         </div>
     </div>
 
-    @*     <div class="text-container-mini">
-    <p>
-    Grow Your Wealth
-    </p>
-    </div> *@
-
     <div class="text-container">
         <p>
             Diversify Your Portfolio
             With Real Estate Investments
         </p>
         <button class="btn btn-custom">Learn More</button>
+    </div>
+
+    <div class="placeholder-section">
+
+        <section class="about-us py-5" style="position: relative; z-index: 2;">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2>About Sagicor Real Estate X Fund</h2>
+                    <p>Investing in real estate opportunities that drive growth and add value to our stakeholders.</p>
+                </div>
+
+                <div class="row">
+                    <!-- Overview Section -->
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-building fa-3x text-primary mb-3"></i>
+                        <h4 class="fw-bold">Who We Are</h4>
+                        <p>Sagicor Real Estate X Fund is Jamaica's largest publicly traded real estate investment company, listed on the JSE and backed by Sagicor Group Jamaica Limited.</p>
+                    </div>
+
+                    <!-- Key Investments Section -->
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-hotel fa-3x text-primary mb-3"></i>
+                        <h4 class="fw-bold">Our Key Investments</h4>
+                        <p>Our portfolio includes ownership of the DoubleTree by Hilton at Universal Orlando and investments in Jamaica's commercial real estate via the Sigma Real Estate Portfolio.</p>
+                    </div>
+
+                    <!-- Future Growth Section -->
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                        <h4 class="fw-bold">Positioned for Growth</h4>
+                        <p>We’re expanding our investments beyond tourism into broader commercial real estate assets with promising growth potential.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Financial Highlights Section -->
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-dollar-sign fa-3x text-primary mb-3"></i>
+                        <h4 class="fw-bold">Financial Highlights</h4>
+                        <p>Total assets of JMD $28.65 billion, with stockholders’ equity up by 15% and revenue growth of 23% over the previous year.</p>
+                    </div>
+
+                    <!-- Global Market Insights Section -->
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-globe fa-3x text-primary mb-3"></i>
+                        <h4 class="fw-bold">Global Market Insights</h4>
+                        <p>We monitor global trends to assess new real estate opportunities, balancing tourism and diversified investments for long-term resilience.</p>
+                    </div>
+
+                    <!-- Commitment to Stakeholders Section -->
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
+                        <h4 class="fw-bold">Our Commitment</h4>
+                        <p>We prioritize the health, well-being, and success of our team, clients, and stakeholders as we pursue strategic growth in a changing economy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+@*         <h2>Placeholder Section</h2>
+        <p>This is a placeholder section. Add your content here.</p> *@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
