@@ -1,0 +1,112 @@
+﻿@page
+@model Xfund.Pages.AboutMemberModel
+@{
+    ViewData["Title"] = "About Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        .about-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+ 
+        .details {
+            flex: 1;
+            padding-right: 80px;
+            text-align: center;
+        }
+ 
+        .image {
+            flex: 0 0 500px;
+        }
+ 
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+ 
+        .name {
+            color: #84BD00;
+        }
+ 
+        .position {
+            color: #84BD00;
+        }
+ 
+        .bio {
+            line-height: 2.5;
+        }
+ 
+        .section-header {
+            display: flex;
+            justify-content: center;
+        }
+ 
+        .section-header::after {
+            content: '';
+            position: absolute;
+            display: block;
+            border-bottom: 3px solid #00C2FF;
+            width: 100px;
+            margin: auto;
+            padding: 20px;
+            margin-top: 10px;
+        }
+ 
+        .date {
+            margin-top: 35px;
+        }
+ 
+        @@media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                align-items: center;
+            }
+ 
+            .details {
+                padding-right: 0;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+ 
+            .image {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+ 
+            .image img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <div class="details">
+            <h1 class="name">Lisa Storm</h1>
+            <div class="section-header"></div>
+            <h2 class="position">Managing Director</h2>
+            <h6 class="date">December 23, 2023</h6>
+            <p class="bio">Stephen McNamara was called to the Bar at Lincoln’s Inn, and in St Lucia in 1972. He is the senior partner of McNamara & Company, Attorneys-at-Law of St. Lucia. The barrister/solicitor specialises in the representation of foreign investors in St Lucia in the Tourism, Manufacturing and Banking sectors. He served as Chairman of the St Lucia Tourist Board for nine years. He was appointed Non-Executive Chairman of Sagicor Financial Corporation, the Group’s holding company, on January 1, 2010, having formally served as Vice Chairman since June 2007, and is the Chairman of the Group’s main operating subsidiary Sagicor Life Inc. and also of Sagicor USA and a number of other subsidiaries within the Group.</p>
+        </div>
+        <div class="image">
+            <img src="~/images/female.png" alt="Lisa Storm">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
