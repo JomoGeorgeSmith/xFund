@@ -10,13 +10,10 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-
         .carousel-container {
             position: absolute;
             top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
             z-index: 1;
         }
 
@@ -62,6 +59,32 @@
             color: white;
             margin-left: 0;
         }
+
+        .second-section {
+            margin-top: 90vh;
+            padding: 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .icon {
+            color: #00C2FF;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .icon:hover {
+                transform: scale(1.1);
+                color: #84BD00;
+            }
+
+        .section-title {
+            color: #008BB2;
+            font-weight: bold;
+        }
+
+        .section-content {
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -91,18 +114,64 @@
         </div>
     </div>
 
-    @*     <div class="text-container-mini">
-    <p>
-    Grow Your Wealth
-    </p>
-    </div> *@
-
     <div class="text-container">
         <p>
             Diversify Your Portfolio
             With Real Estate Investments
         </p>
-        <button class="btn btn-custom">Learn More</button>
+        <a href="#about-us" class="btn btn-custom">Learn More</a>
+    </div>
+
+    <div class="second-section" id="about-us">
+
+        <section class="about-us py-5" style="position: relative; z-index: 2;">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-title">About Sagicor Real Estate X Fund</h2>
+                    <p class="section-content">Investing in real estate opportunities that drive growth and add value to our stakeholders.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-building fa-3x icon mb-3"></i>
+                        <h4 class="section-title">Who We Are</h4>
+                        <p class="section-content">Sagicor Real Estate X Fund is Jamaica's largest publicly traded real estate investment company, listed on the JSE and backed by Sagicor Group Jamaica Limited.</p>
+                    </div>
+
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-hotel fa-3x icon mb-3"></i>
+                        <h4 class="section-title">Our Key Investments</h4>
+                        <p class="section-content">Our portfolio includes ownership of the DoubleTree by Hilton at Universal Orlando and investments in Jamaica's commercial real estate via the Sigma Real Estate Portfolio.</p>
+                    </div>
+
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-chart-line fa-3x icon mb-3"></i>
+                        <h4 class="section-title">Positioned for Growth</h4>
+                        <p class="section-content">We’re expanding our investments beyond tourism into broader commercial real estate assets with promising growth potential.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-dollar-sign fa-3x icon mb-3"></i>
+                        <h4 class="section-title">Financial Highlights</h4>
+                        <p class="section-content">Total assets of JMD $28.65 billion, with stockholders’ equity up by 15% and revenue growth of 23% over the previous year.</p>
+                    </div>
+
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-globe fa-3x icon mb-3"></i>
+                        <h4 class="section-title">Global Market Insights</h4>
+                        <p class="section-content">We monitor global trends to assess new real estate opportunities, balancing tourism and diversified investments for long-term resilience.</p>
+                    </div>
+
+                    <div class="col-md-4 text-center mb-4">
+                        <i class="fas fa-handshake fa-3x icon mb-3"></i>
+                        <h4 class="section-title">Our Commitment</h4>
+                        <p class="section-content">We prioritize the health, well-being, and success of our team, clients, and stakeholders as we pursue strategic growth in a changing economy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
