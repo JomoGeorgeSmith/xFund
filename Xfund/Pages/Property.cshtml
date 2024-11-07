@@ -1,0 +1,186 @@
+﻿@page
+@model Xfund.Pages.PropertyModel
+@{
+    ViewData["Title"] = "Property";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    @* <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .hero {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 70vh;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 65vh;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-heading {
+            color: white;
+        }
+
+        .hero-heading h1, .section-header,
+        .property-details-top {
+            text-transform: uppercase;
+        }
+
+        .main-section {
+            margin-top: 62vh;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            display: block;
+            border-bottom: 3px solid #8ec63f;
+            width: 100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        #hero .carousel-inner img {
+            width: 100%;
+            height: 70vh;
+        }
+
+        .carousel-inner, .carousel-item {
+            height: 70vh;
+            background: #111;
+        }
+
+        .property {
+            height: 230px;
+            max-height: 230px;
+        }
+        .property img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-caption{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width:100%;
+            padding: 2rem;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(calc(20vh));
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .carousel:hover .carousel-caption{
+            opacity: 1;
+            transform: translateY(calc(0vh));
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="hero" class="hero">
+        <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+            @* <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div> *@
+
+            <div class="carousel-inner position-relative overflow-hidden">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="~/images/double_tree.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                @if (Model.Properties is not null)
+                {
+                    @foreach (var place in Model.Properties)
+                    {
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="@place.ImagePath" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>@place.Name</h5>
+                                <p>@place.Description</p>
+                            </div>
+                        </div>
+
+                    }
+                }
+                
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <section class="main-section">
+       
+        <div class="property-listing px-2">
+            <div class="container-fluid">
+                <div class="row">
+
+                    @if (Model.Properties is not null)
+                    {
+                        @foreach (var place in Model.Properties.Take(4))
+                        {
+                            <div class="col-md-3 col-container p-0">
+                                <div class="property position-relative overflow-hidden px-1">
+                                    <a href="/Property">
+                                        <img src="@place.ImagePath" alt="Alternate Text" class="img-fluid" />
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                   
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
